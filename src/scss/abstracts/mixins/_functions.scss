@@ -1,0 +1,6 @@
+@function rem($p , $size: 16px) { 
+    @return $p /$size *1rem ; 
+}
+@function border($color) {
+    @return 1px solid $color ;
+}

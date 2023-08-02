@@ -1,0 +1,75 @@
+// Box-sizing reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Remove list styles (bullets, indentation)
+ul,
+ol {
+  list-style: none;
+}
+
+// Remove default anchor text-decoration
+a,
+a:is(:focus, :hover) {
+  text-decoration: none;
+}
+a img,span,
+video {
+  display: block;
+}
+video,
+img {
+  width: 100%;
+  max-width: 100%;
+}
+// Remove outline on focus
+:focus {
+  outline: none;
+}
+
+// Reset heading elements
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: capitalize;
+  font-size: inherit;
+  font-weight: 700;
+}
+
+// Reset form elements
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  line-height: normal;
+  display: block;
+}
+
+// Normalize HTML5 elements
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section,
+summary {
+  display: block;
+}

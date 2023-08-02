@@ -1,0 +1,19 @@
+@mixin shadow-hover($shadow...) { 
+    &::after { 
+        content: ''; 
+        height: 100%; 
+        width: 100%;
+        position: absolute;
+        box-shadow: $shadow;
+        opacity: 0;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: transparent;
+        transition: opacity .5s ease-in;
+    }
+    &:hover::after { 
+        opacity: 1;
+    }
+}
+

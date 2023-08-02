@@ -1,0 +1,20 @@
+
+// importing  Base 
+@use "./abstracts/variables" as *;
+@use "./utilities/reset" as *;
+
+
+
+
+
+
+
+
+// importing  utilities
+ 
+@use "./utilities/reused" as *; 
+@use "./utilities/scroll" as *;
+@use "./utilities/buttons" as *;
+// importing pages 
+@use "./pages/main"as *;
+

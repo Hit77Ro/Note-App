@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a,
+a:is(:focus, :hover) {
+  text-decoration: none;
+}
+
+a img, span,
+video {
+  display: block;
+}
+
+video,
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: capitalize;
+  font-size: inherit;
+  font-weight: 700;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  line-height: normal;
+  display: block;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  font-size: 1.6rem;
+  overflow-y: overlay;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  height: 100%;
+  width: 1300px;
+  max-width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.6rem;
+}
+
+.f-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.f-column-center {
+  display: flex;
+  align-items: center;
+}
+
+.f-column-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links-center-flex .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Scroll customisation */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--scollbar-track-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-bg-clr);
+  border-radius: var(--scrollbar-thumb-radius);
+}
+
+/* Scroll To Top  Button  */
+.btn {
+  transition: all 0.15s ease-in;
+  background-color: transparent;
+  border: 1px solid transparent;
+  text-transform: capitalize;
+  display: block;
+  padding: 5px;
+  border-radius: 0.2rem;
+  text-align: center;
+  white-space: nowrap;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.main-btn {
+  padding: 5px 10px;
+  background-color: #2196f3;
+  color: white;
+  border-radius: 5px;
+  font-size: 1.3rem;
+}
+.main-btn:hover {
+  background-color: #0c7cd5;
+}

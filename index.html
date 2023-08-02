@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- primary meta tags -->
+    <meta name="title" content="Wren - Personal blog website" />
+    <meta
+      name="description"
+      content="This is a blog html template made by Os"
+    />
+
+    <!-- importing Styles  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <!--  importing Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- importing preload assets/images -->
+    <title>code scss</title>
+  </head>
+
+  <body>
+    <ul class="container">
+      <li class="card add-note">
+        <button class="add-btn"><i class="fas fa-plus"></i></button>
+        <span class="add-text">add new note</span>
+      </li>
+      <!--  -->
+      <!-- <li class="note">
+        <div class="note-header">
+          <p class="note-title">smail</p>
+          <span>welcome</span>
+        </div>
+        <div class="note-content">
+          <span class="note-date">August 1, 2023</span>
+          <div class="settings">
+            <i onclick="showMenu(this)" class="uil uil-ellipsis-h"></i>
+            <ul class="menu">
+              <li onclick="updateNote(0, 'smail', 'welcome')">
+                <i class="uil uil-pen"></i>Edit
+              </li>
+              <li onclick="deleteNote(0)">
+                <i class="uil uil-trash"></i>Delete
+              </li> -->
+      <!-- <li class="note card">
+        <h1 class="note-title">computer science</h1>
+        <p class="note-description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dolore
+          culpa quam, debitis, ducimus reiciendis quia, et quae ea consectetur
+          quis adipisci? Tempore recusandae iusto quod, quis in error animi?
+        </p>
+        <div class="note-footer">
+          <span class="note-date">August 1, 2023</span>
+
+          <div class="note-settings">
+            <button class="menu-toggler">
+              <i class="fas fa-ellipsis-h"></i>
+            </button>
+            <div class="note-menu">
+              <button class="note-edit btn">
+                <i class="fas fa-edit"></i> <span class="text">edit</span>
+              </button>
+              <button class="note-delete btn">
+                <i class="fas fa-trash"></i> <span class="text">delete</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </li> -->
+    </ul>
+
+    <!-- add box -->
+    <div class="popup">
+      <div class="header">
+        <span>add a new note </span
+        ><button class="close-popup"><i class="fas fa-x"></i></button>
+      </div>
+      <div class="body">
+        <div class="form_field">
+          <label>title</label>
+          <input type="text" placeholder="note title" />
+        </div>
+        <div class="form_field">
+          <label>description</label>
+          <textarea
+            class="description"
+            type="text"
+            placeholder="note description"
+          ></textarea>
+        </div>
+        <button class="add-note">add note</button>
+        <button class="save hidden">save</button>
+      </div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

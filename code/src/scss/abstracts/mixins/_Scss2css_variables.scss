@@ -1,0 +1,8 @@
+@mixin convert-variables($prefix: "") {
+    :root {
+      @each $name, $value in $variables {
+        $variableName: #{$prefix}#{$name};
+        --#{$variableName}: #{$value};
+      }
+    }
+  }

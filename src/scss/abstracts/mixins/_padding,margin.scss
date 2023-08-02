@@ -1,0 +1,39 @@
+@mixin my($size) {
+  @if (length($size) > 1) {
+    margin-top: nth($size, 1);
+    margin-bottom: nth($size, length($size));
+  } @else {
+    margin-top: $size;
+    margin-bottom: $size;
+  }
+}
+
+@mixin mx($size) {
+  @if (length($size) > 1) {
+    margin-left: nth($size, 1);
+    margin-right: nth($size, length($size));
+  } @else {
+    margin-left: $size;
+    margin-right: $size;
+  }
+}
+
+@mixin py($size) {
+  @if (length($size) > 1) {
+    padding-top: nth($size, 1);
+    padding-bottom: nth($size, length($size));
+  } @else {
+    padding-top: $size;
+    padding-bottom: $size;
+  }
+}
+
+@mixin px($size) {
+  @if (length($size) > 1) {
+    padding-left: nth($size, 1);
+    padding-right: nth($size, length($size));
+  } @else {
+    padding-left: $size;
+    padding-right: $size;
+  }
+}

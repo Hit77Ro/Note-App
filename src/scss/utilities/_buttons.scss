@@ -1,0 +1,28 @@
+@use "../abstracts/variables" as *;
+
+.btn {
+  transition: all 0.15s ease-in;
+  background-color: transparent;
+  border: 1px solid transparent;
+  text-transform: capitalize;
+  display: block;
+  padding: 5px;
+  border-radius: 0.2rem;
+  text-align: center;
+  white-space: nowrap;
+  position: relative;
+  user-select: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.main-btn {
+  padding: 5px 10px;
+  background-color: $main-clr;
+  color: white;
+  border-radius: 5px;
+  font-size: $fz-medium;
+  &:hover {
+    background-color: darken($main-clr, 10);
+  }
+}

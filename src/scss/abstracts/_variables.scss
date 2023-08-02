@@ -1,0 +1,61 @@
+@import "./mixins";
+// ==== custom colors
+$main-clr: #2196f3;
+$main-clr-alt: #1787e0;
+$light: white;
+$black: black;
+$red: #f44036;
+$green: #009688;
+$blue: #25b5f5;
+// Card stuff
+
+$card-clr: #f6f5f5;
+// ==== Text Color
+$text-clr: #666;
+$title-clr: #010000;
+// ==== Section Stuff
+$section-padding: 7rem;
+$section-bg: #ececec;
+// ==== Transition
+$transition: 0.3s;
+$transition5: 0.5s;
+
+// ==== Font
+$ff-cairo: "Cairo", sans-serif;
+
+// Header
+$header-height: 7rem;
+
+// Font && typography
+$fz-extralarge: 2rem;
+$fz-large: 1.8rem;
+$fz-normal: 1.5rem;
+$fz-medium: 1.3rem;
+$fz-small: 1.2rem;
+$fz-extrasmall: 1rem;
+//  home font stuff
+$home-title: 3.4rem;
+$home-title-sm: 2.8rem;
+$home-text: 2.3rem;
+$home-text-sm: 1.8rem;
+
+//
+$fw-normal: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-bolder: 800;
+
+// Radius
+$r5: 0.5rem;
+$r10: 1rem;
+
+// shadows
+
+$shadow-1: 0.1rem.1rem 0.5rem $section-bg;
+$shadow-2: 0.1rem.1rem 0.5rem #4444;
+
+// spacer
+$spacer10: 1rem;
+$spacer15: 1.5rem;
+$spacer20: 2rem;

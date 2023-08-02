@@ -1,0 +1,49 @@
+@mixin tl($size) {
+    @if (length($size ) > 1) {
+        top: nth($size , 1);
+        left: nth($size , length($size));
+    }
+
+    @else {
+        top: $size;
+        left: $size;
+    }
+
+}
+@mixin tr($size) {
+    @if (length($size ) > 1) {
+        top: nth($size , 1);
+        right: nth($size , length($size));
+    }
+
+    @else {
+        top: $size;
+        right: $size;
+    }
+
+}
+
+@mixin br($size) {
+        @if (length($size ) > 1) {
+            bottom: nth($size , 1);
+            right: nth($size , length($size));
+        }
+
+        @else {
+            bottom: $size;
+            right: $size;
+        }
+    
+}
+@mixin bl($size) {
+    @if (length($size ) > 1) {
+        bottom: nth($size , 1);
+        left: nth($size , length($size));
+    }
+
+    @else {
+        bottom: $size;
+        left: $size;
+    }
+
+}

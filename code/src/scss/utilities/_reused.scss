@@ -1,0 +1,46 @@
+@use "../abstracts/variables" as *;
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+body {
+  font-family: $ff-cairo;
+  font-size: 1.6rem;
+  overflow-y: overlay;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  height: 100%;
+  width: 1300px;
+  max-width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.6rem;
+}
+
+.f-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.f-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.f-column-center {
+  display: flex;
+  align-items: center;
+}
+.f-column-between {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-links-center-flex .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

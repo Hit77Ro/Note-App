@@ -1,0 +1,163 @@
+@use "../abstracts/variables" as *;
+
+:root {
+  --light: white;
+  --black: black;
+  --mainColor: rgb(0, 47, 255);
+  --shadow: 1px 1px 5px 0px rgba(0 0 0/ 0.2),
+    -1px -1px 5px 0px rgba(0 0 0 / 0.2);
+  --transition: 0.3s ease-in-out;
+  --fz-13: 13px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  gap: 40px;
+  .card {
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px 0px rgba(black, 0.3);
+  }
+  .add-note {
+    @include flex-center;
+    flex-direction: column;
+    cursor: pointer;
+    color: var(--mainColor);
+    gap: 40px;
+    .add-btn {
+      cursor: pointer;
+      font-size: 30px;
+      border-radius: 50%;
+      @include box(100px);
+      display: block;
+      border: 2px dashed var(--mainColor);
+    }
+    .add-text {
+      font-size: 20px;
+      text-transform: capitalize;
+    }
+  }
+  .note {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    &-footer {
+      @include flex-between;
+    }
+    &-settings {
+      position: relative;
+      .menu-toggler {
+        cursor: pointer;
+      }
+    }
+    &-menu {
+      position: absolute;
+      background-color: var(--light);
+      box-shadow: var(--shadow);
+      border-radius: 10px;
+      min-width: 100px;
+      right: 0%;
+      bottom: 0;
+      padding-block: 10px;
+      transition: var(--transition);
+      transform-origin: right bottom;
+      transform: scale(0.2);
+      opacity: 0;
+      pointer-events: none;
+      &.show {
+        pointer-events: all;
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .btn {
+        font-size: var(--fz-13);
+        width: 100%;
+        @include flex-between;
+        flex-grow: 1;
+        gap: 10px;
+        color: var(--mainColor);
+        padding-block: 5px;
+        &:hover {
+          background-color: #eee;
+        }
+      }
+    }
+  }
+}
+
+.popup {
+
+  width: 400px;
+  z-index: 1200;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  background-color: var(--light);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  @include flex-between;
+  transition: var(--transition);
+  align-items: stretch;
+  flex-direction: column;
+  pointer-events: none;
+  opacity: 0;
+  gap: 20px;
+  &.show {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .header {
+    span {
+      font-size: 19px;
+      color: var(--mainColor);
+    }
+    padding-block: 10px;
+    @include flex-between;
+    border-bottom: 1px solid #e9e8e8;
+  }
+  .add-note ,.save{
+    cursor: pointer;
+    margin-top: 30px;
+    border-radius: 10px;
+    color: var(--light);
+    font-size: 17px;
+    padding: 10px 20px;
+    display: block;
+    width: 100%;
+    background-color: var(--mainColor);
+    &.hidden { 
+      display: none;
+    }
+  }
+  .close-popup {
+    color: var(--mainColor);
+    cursor: pointer;
+    display: block;
+    @include box(40px);
+    background-color: #fcfbfb;
+    border-radius: 5px;
+  }
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  label {
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+}
+.overlay {
+  @include page-overlay;
+}
