@@ -205,7 +205,7 @@ class App {
     if (!data) return;
     this.notes = data;
 
-    this.notes.forEach((el) => this._renderNote(el));
+    this.notes.reverse().forEach((el) => this._renderNote(el));
   }
 
   _renderNote(note) {
